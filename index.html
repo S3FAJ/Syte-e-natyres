@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syri i Natyres</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-leaf"></i> Syri i Natyres</h1>
+    <p>Raporto problemet mjedisore ne Parkun Kombetar Korab-Koritnik</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#rreth"><i class="fas fa-mountain"></i> Rreth Parkut</a></li>
+      <li><a href="#qellimi"><i class="fas fa-bullseye"></i> Qellimi i Projektit</a></li>
+      <li><a href="#si-te-raportosh"><i class="fas fa-info-circle"></i> Si te Raportosh</a></li>
+      <li><a href="#raporto"><i class="fas fa-exclamation-triangle"></i> Raporto</a></li>
+    </ul>
+  </nav>
+
+  <section id="rreth">
+    <h2>Rreth Parkut Kombetar Korab-Koritnik</h2>
+    <img src="korab-koritnik.jpg" alt="Parku Korab-Koritnik" style="width:100%; border-radius: 10px;">
+    <p>Parku Kombetar Korab-Koritnik shtrihet ne verilindje te Shqiperise dhe perfshin nje zone malore spektakolare qe kufizohet me Maqedonine e Veriut. Ai eshte nje nga parket me te medhenj dhe me te pasur ne biodiversitet ne Shqiperi, me nje siperfaqe mbi 55,000 hektare. Parku perfshin malin me te larte te Shqiperise, Korabin, dhe pasqyron nje mozaik ekosistemesh si pyje dushku, ahu, bredhi, livadhe alpine dhe peizazhe shkembore.</p>
+    <p>Ketu gjenden lloje te rralla si rrëqebulli i Ballkanit, ariu i murrme, kaprolli dhe nje shumellojshmeri shpendesh dhe bimesh te mbrojtura. Eshte nje zone me rendesi te vecante ekologjike dhe gjeografike, pjeserisht e paprekur nga nderhyrjet njerezore.</p>
+    <img src="harta-korab-koritnik.png" alt="Harta e Parkut Korab-Koritnik" style="width:100%; border-radius: 10px; margin-top: 10px;">
+  </section>
+
+  <section id="qellimi">
+    <h2>Qellimi i Projektit</h2>
+    <p>Qellimi kryesor i ketij projekti eshte te krijoje nje lidhje direkte midis vizitoreve dhe mbrojtjes se natyres. Duke fuqizuar qytetaret me mjetet per te raportuar ne kohe reale, projekti nxit nje kulture bashkepunimi dhe pergjegjesie per mjedisin. Ai synon te ndihmoje institucionet publike dhe organizatat mjedisore ne marrjen e vendimeve te informuara, bazuar ne te dhenat e mbledhura ne terren.</p>
+    <p>“Behu syte e natyres” eshte me shume se nje faqe raportimi — eshte nje levizje per te ruajtur bukurite natyrore te Shqiperise dhe per te promovuar turizmin e qendrueshem dhe angazhimin qytetar.</p>
+    <img src="foto-mjedisi.jpg" alt="Mjedisi i Parkut Korab-Koritnik" style="width:100%; border-radius: 10px; margin-top: 10px;">
+    <blockquote>“Mos jeto pa lene gjurme. Ruaj natyren, ajo eshte frymemarrja jone.”</blockquote>
+  </section>
+
+  <section id="si-te-raportosh">
+    <h2>Si te Raportosh</h2>
+    <ul>
+      <li><i class="fas fa-user"></i> Ploteso formen me emrin dhe mbiemrin tend.</li>
+      <li><i class="fas fa-map-marker-alt"></i> Vendos zonen ku ndodhet problemi.</li>
+      <li><i class="fas fa-pen"></i> Shkruaj pershkrimin e problemit mjedisor.</li>
+      <li><i class="fas fa-camera"></i> Ngarko nje foto te problemit.</li>
+      <li><i class="fas fa-paper-plane"></i> Dergo raportin per tu analizuar nga admini.</li>
+    </ul>
+  </section>
+
+  <section id="raporto">
+    <h2>Raporto nje problem</h2>
+    <form action="/raporto" method="POST" enctype="multipart/form-data">
+      <label for="emri">Emri:</label>
+      <input type="text" id="emri" name="emri" required><br>
+
+      <label for="mbiemri">Mbiemri:</label>
+      <input type="text" id="mbiemri" name="mbiemri" required><br>
+
+      <label for="zona">Zona e raportimit:</label>
+      <input type="text" id="zona" name="zona" required><br>
+
+      <label for="pershkrimi">Pershkrimi:</label>
+      <textarea id="pershkrimi" name="pershkrimi" rows="5" required></textarea><br>
+
+      <label for="foto">Ngarko Foto:</label>
+      <input type="file" id="foto" name="foto" accept="image/*" required><br>
+
+      <button type="submit">Dergo Raportin</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Syri i Natyres. Te gjitha te drejtat e rezervuara.</p>
+  </footer>
+</body>
+</html>
