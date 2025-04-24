@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html lang="sq">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakti</title>
-</head>
-<body>
-  <h1>Na kontaktoni</h1>
-  <form action="https://formspree.io/f/xeogqdva" method="POST">
-    <label for="name">Emri yt:</label>
-    <input type="text" id="name" name="name" required>
+<form id="contact-form">
+  <!-- fushat e formës këtu -->
+  <button type="submit">Dërgo</button>
+</form>
 
-    <label for="email">Emaili yt:</label>
-    <input type="email" id="email" name="julindasefaj174@gmail.com" required>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    <label for="message">Mesazhi yt:</label>
-    <textarea id="message" name="message" required></textarea>
+    const formData = new FormData(this);
 
-    <button type="submit">Dërgo</button>
-  </form>
-</body>
-</html>
+    fetch('https://formspree.io/f/xeogqdva', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Mesazhi u dërgua me sukses!');
+      } else {
+        alert('Ndodhi një gabim gjatë dërgimit të mesazhit.');
+      }
+    })
+    .catch(error => {
+      alert('Gabim në rrjet: ' + error.message);
+    });
+  });
+</script>
